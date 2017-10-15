@@ -14,13 +14,163 @@
 \date{19 octobre 2017}
 \author{Jeff Abrahamson \and Hugo Mougard}
 \institute{DevFest Nantes 2017}
+
+% Let me use colours by name.
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{green}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\purple[1]{\textcolor{purple}{#1}}
+\newcommand\smallgray[1]{\textcolor{gray}{\footnotesize\it #1}}
+\newcommand\prevwork[1]{\smallgray{#1}}
+
+% Some ways to include images.
+% o=only, f=full, h=fit height.
+% more g's or h's means smaller still.
+\newcommand\cimgo[1]{\vfill\centerline{\includegraphics{#1}}\vfill}
+\newcommand\cimgff[1]{\vfill\centerline{\includegraphics[width=1.2\textwidth]{#1}}\vfill}
+\newcommand\cimgf[1]{\vfill\centerline{\includegraphics[width=\textwidth]{#1}}\vfill}
+\newcommand\cimg[1]{\vfill\centerline{\includegraphics[width=.9\textwidth]{#1}}\vfill}
+\newcommand\cimgg[1]{\vfill\centerline{\includegraphics[width=.8\textwidth]{#1}}\vfill}
+\newcommand\cimggg[1]{\vfill\centerline{\includegraphics[width=.7\textwidth]{#1}}\vfill}
+\newcommand\cimgsm[1]{\vfill\centerline{\includegraphics[width=.4\textwidth]{#1}}\vfill}
+\newcommand\cimgt[1]{\centerline{\includegraphics[width=.2\textwidth]{#1}}\vfill}
+\newcommand\cimgh[1]{\vfill\centerline{\includegraphics[height=.9\textheight]{#1}}\vfill}
+\newcommand\cimghh[1]{\vfill\centerline{\includegraphics[height=.8\textheight]{#1}}\vfill}
+\newcommand\cimghhh[1]{\vfill\centerline{\includegraphics[height=.7\textheight]{#1}}\vfill}
+\newcommand\cimghhhh[1]{\vfill\centerline{\includegraphics[height=.6\textheight]{#1}}\vfill}
+
+% Just one phrase centered horizontally and vertically.
+\newcommand\vphrase[1]{\vfill\centerline{\large\bf\blue{#1}}\vfill}
+
 \begin{document}
 \maketitle
 
 \section{L'apprentissage automatique}
 \label{sec:ml}
-\begin{frame}{Hey I'm a frame}
-  Hello, world!
+\begin{frame}{Definition}
+  \begin{itemize}
+  \item Supervised
+  \item Unsupervised
+  \item Reinforcement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{What is ML?}
+  \only<1>{
+    \vphrase{Machine learning is not magic}
+  }
+  \only<2>{
+    \vphrase{Machine learning is mathematics}
+  }
+  \only<3>{
+    \vspace{1cm}
+    \blue{\bf Mostly, it's these maths:}
+    \begin{itemize}
+    \item Probability
+    \item Statistics
+    \item Linear algebra
+    \item Optimisation theory
+    \item Differential calculus
+    \end{itemize}
+  }
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{What is Statistics}
+  
+  \begin{enumerate}
+  \item<1-3> Identify a question or problem.
+  \item<1-3> Collect relevant data on the topic.
+  \item<1-3> Analyze the data.
+  \item<1-3> Form a conclusion.
+  \end{enumerate}
+  \only<2>{Sadly, sometimes people forget 1.}
+  \only<3>{Statistics is about making 2--4 efficient, rigorous, and meaningful.}
+  \only<3>{\vfill\prevwork{\textit{OpenIntro Statistics},
+      2nd edition, D.~Diez, C.~Barr, M.~Çetinkaya-Rundel, 2013.}}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{What is data science?}
+
+  \only<1-4>{(Exercise: Is this the same question as the last slide?)}
+
+  \only<1>{
+    \begin{enumerate}
+    \item Define the question of interest
+    \item Get the data
+    \item Clean the data
+    \item Explore the data
+    \item Fit statistical models
+    \item Communicate the results
+    \item Make your analysis reproducible
+    \end{enumerate}
+  }
+  \only<2>{
+    \begin{enumerate}
+    \item Define the question of interest
+    \item Get the data
+    \item Clean the data
+    \item \red{Explore the data}
+    \item \red{Fit statistical models}
+    \item Communicate the results
+    \item Make your analysis reproducible
+    \end{enumerate}
+
+    \blue{What the public thinks.}
+  }
+  \only<3>{
+    \begin{enumerate}
+    \item Define the question of interest
+    \item \red{Get the data}
+    \item \red{Clean the data}
+    \item Explore the data
+    \item Fit statistical models
+    \item \red{Communicate the results}
+    \item \red{Make your analysis reproducible}
+    \end{enumerate}
+
+    \blue{Where we spend most of our time.}
+  }
+  \only<4>{
+    \begin{enumerate}
+    \item \red{Define the question of interest}
+    \item Get the data
+    \item Clean the data
+    \item Explore the data
+    \item Fit statistical models
+    \item Communicate the results
+    \item Make your analysis reproducible
+    \end{enumerate}
+
+    \blue{The easiest part to forget.}
+  }
+  \only<5>{\vfill\prevwork{\url{http://simplystatistics.org/2015/03/17/} \url{data-science-done-well-looks-easy-and-that-is-a-big-} \url{problem-for-data-scientists/}}}
+
+  \only<6>{\vfill\cimg{images/model-in-one-day.jpg}\vfill}
+\end{frame}
+
+\begin{frame}{Representation}
+  \vphrase{Typically a vector space}
+
+  \vphrase{Features are dimensions}
+\end{frame}
+
+\begin{frame}{Features}
+  \vphrase{Feature extraction}
+
+  \vphrase{Feature engineering, synthetic features}
+\end{frame}
+
+\begin{frame}{Feature Engineering}
+  \begin{enumerate}
+  \item Brainstorm
+  \item Pick some
+  \item Make them
+  \item Evaluate
+  \item Repeat
+  \end{enumerate}
 \end{frame}
 
 \section{Les réseaux de neurones artificiels}
