@@ -1,4 +1,4 @@
-FROM jupyter/tensorflow-notebook:latest
+FROM python:3.5
 
 WORKDIR /usr/src/app
 
