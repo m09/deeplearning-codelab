@@ -9,6 +9,8 @@
 \usepackage{hyperref}
 \usepackage[francais]{babel}
 
+\graphicspath{{./images/}}
+
 \usetheme{metropolis}
 \title{The Deep Learning Codelab}
 \date{19 octobre 2017}
@@ -46,7 +48,7 @@
 \begin{document}
 \maketitle
 
-\section{L'apprentissage automatique}
+\section{Machine Learning}
 \label{sec:ml}
 \begin{frame}{Definition}
   \begin{itemize}
@@ -173,16 +175,67 @@
   \end{enumerate}
 \end{frame}
 
-\section{Les réseaux de neurones artificiels}
+\section{Artificial Neural Networks}
 \label{sec:nn}
-\begin{frame}{Hey I'm a frame}
-  Hello, world!
+
+\begin{frame}{Neural Networks}
+  \textbf{Inspired} by brain :
+  \begin{itemize}
+  \item 1 neuron = 1 simple computation
+  \item 10M neurons = 10M simple computations
+  \item 10M combined neurons = 10M simple computations combined = 1
+    interesting computation
+  \end{itemize}
 \end{frame}
 
-\section{Les réseaux à convolutions}
+\begin{frame}{Neural Networks --- Neural Network Example}
+  \cimgg{neural-network.png}
+\end{frame}
+
+\begin{frame}{Neural Networks --- Biological Neuron}
+  \cimgg{neuron.png}
+\end{frame}
+
+\begin{frame}{Neural Networks --- Artificial Neuron}
+  \cimgg{neuron-model.png}
+\end{frame}
+
+\begin{frame}{Neural Networks --- Activation Function}
+  \cimgg{activation.jpeg}
+\end{frame}
+
+\begin{frame}{Neural Networks --- So What's a Neuron Again?}
+  \begin{itemize}
+  \item   Neuron = Weighted averaged of its input + activation function
+  \item   Goal of learning = learn good weights.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Neural Networks --- Neural Network Example Comeback}
+  \cimgg{neural-network.png}
+\end{frame}
+
+\begin{frame}{Neural Networks --- How to know if they're good}
+  \begin{itemize}
+  \item Find some good examples
+  \item Compare network output and good examples (Loss function).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Neural Networks --- How to Learn Weights?}
+  \begin{enumerate}
+  \item A Neural Network loss is a function
+  \item You actually know how to minimize functions (derivatives)
+  \item …
+  \item Profit
+  \end{enumerate}
+\end{frame}
+
+\section{Convolutionnal Neural Networks}
 \label{sec:convnets}
-\begin{frame}{Hey I'm a frame}
-  Hello, world!
+\begin{frame}{Quel besoin ?}
+  Réseau standard + images = Too Much Information.
+  \cimgg{tmi.jpg}
 \end{frame}
 
 \section{Keras}
@@ -210,18 +263,22 @@
   Hello, world!
 \end{frame}
 
-\section{Modèle}
+\section{Model}
 \label{sec:model}
 \begin{frame}{Hey I'm a frame}
   Hello, world!
 \end{frame}
 
-\section{Ressources}
+\section{Resources}
 \label{sec:resources}
-\begin{frame}{Hey I'm a frame}
+\begin{frame}{Resources}
   Hello, world!
 \end{frame}
 
 \section{Q \& A}
 \label{sec:qa}
 \end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
