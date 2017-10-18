@@ -1,6 +1,6 @@
 \documentclass{beamer}
 
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{xcolor}
@@ -233,9 +233,32 @@
 
 \section{Convolutionnal Neural Networks}
 \label{sec:convnets}
-\begin{frame}{Quel besoin ?}
-  Réseau standard + images = Too Much Information.
+\begin{frame}{CNNs --- Aren't Simple Nets Enough?}
+  \vphrase{Not for images. Each neuron receives each pixel.}
+  \vphrase{→ Too Much Information}
+  \vfill
   \cimgg{tmi.jpg}
+  \vfill
+\end{frame}
+\begin{frame}{CNNs --- TMI 1/3}
+  \cimgg{park.jpg}
+\end{frame}
+\begin{frame}{CNNs --- TMI 2/3}
+  \cimgg{station.jpg}
+\end{frame}
+\begin{frame}{CNNs --- TMI 3/3}
+  \cimgg{street.jpg}
+\end{frame}
+\begin{frame}{CNNs --- Solution 1/2}
+  \vphrase{Restrict neurons' receptive fields}
+  \cimggg{kernel.jpg}
+\end{frame}
+\begin{frame}{CNNs --- Solution 2/2}
+  \vphrase{Combine them hierarchically}
+  \cimggg{cnn.jpg}
+\end{frame}
+\begin{frame}{CNNs --- Examples}
+  \cimg{hierarchical-features.png}
 \end{frame}
 
 \section{Keras}
