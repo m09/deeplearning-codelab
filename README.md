@@ -29,6 +29,19 @@ avant) : python, scikit-learn, TensorFlow, Keras.
 Le codelab est pour débutant en ML. Ce serait peut-être bien que tu ne
 sois pas également débutant en dev.
 
+Environnement de travail
+---
+
+L'environnement de travail est accessible pendant l'atelier à
+l'adresse [35.189.251.190](http://35.189.251.190). Il est nécessaire
+d'avoir un compte [Github](https://github.com/) pour s'y connecter. Il
+n'est pas accessible après l'atelier pour des raisons de coût (il
+utilise Google Cloud).
+
+Vous pouvez trouver l'environnement proposé dans le dépôt Github
+[deeplearning-codelab-image](https://github.com/m09/deeplearning-codelab-image)
+pour le recréer localement quand il n'est plus disponible sur Google
+Cloud.
 
 Slides
 ---
