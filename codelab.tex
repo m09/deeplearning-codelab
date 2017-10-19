@@ -44,9 +44,28 @@
 
 % Just one phrase centered horizontally and vertically.
 \newcommand\vphrase[1]{\vfill\centerline{\large\bf\blue{#1}}\vfill}
+% Just one phrase, I'll position it.
+\newcommand\phrase[1]{\centerline{\huge\bf\blue{#1}}}
 
 \begin{document}
 \maketitle
+
+\section{github}
+
+\begin{frame}
+\vfill
+\centerline{\large\bf\blue{\url{https://github.com/m09/deeplearning-codelab}}}
+\vspace{5mm}
+\centerline{\large\bf\blue{\url{https://github.com/m09/deeplearning-codelab-image}}}
+\vfill
+\end{frame}
+
+\begin{frame}{For the tutorials}
+  \begin{enumerate}
+  \item Make a Github account (if you don't already have one)
+  \item Go to \url{http://35.189.251.190}
+  \end{enumerate}
+\end{frame}
 
 \section{Machine Learning}
 \label{sec:ml}
@@ -274,6 +293,14 @@
 \end{enumerate}
 \end{frame}
 
+\begin{frame}{Code!}
+  \vphrase{Pima Indians and Diabetes}
+\end{frame}
+
+\begin{frame}{Code!}
+  \vphrase{MNIST}
+\end{frame}
+
 \section{Infrastructure}
 \label{sec:infra}
 \begin{frame}{Infrastructure --- Google Cloud}
@@ -307,26 +334,159 @@
   \end{enumerate}
 \end{frame}
 
-\section{MNIST}
-\label{sec:mnist}
-\begin{frame}{Hey I'm a frame}
+% \section{MNIST}
+% \label{sec:mnist}
+% \begin{frame}{Hey I'm a frame}
   
-\end{frame}
+% \end{frame}
 
-\section{Model}
-\label{sec:model}
-\begin{frame}{Hey I'm a frame}
-  Hello, world!
-\end{frame}
+% \section{Model}
+% \label{sec:model}
+% \begin{frame}{Hey I'm a frame}
+%   Hello, world!
+% \end{frame}
 
 \section{Resources}
 \label{sec:resources}
-\begin{frame}{Resources}
-  Hello, world!
+
+\begin{frame}{ML Week}
+  \frametitle{Resources}
+  \cimggg{ml-week.png}
+
+  \vspace{5mm}
+  \centerline{\url{http://www.ml-week.com/}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Basics}
+
+  \begin{itemize}
+  \item Everything is a math problem (and a vector space)
+  \item Features are king (and most of our time)
+  \item More data is usually better
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Choices (I)}
+    
+  \begin{itemize}
+  \item Supervised (I know some answers)
+  \item Unsupervised (I don't know much)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Choices (II)}
+  \begin{itemize}
+  \item Regression (answers in $\mathbb{R}$)
+  \item Classification (answers are categories)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Tools}
+
+  \phrase{There are many.}
+
+  \vspace{1cm}
+  \centerline{  \red{It's easy to waste time}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Techniques (I)}
+
+  \begin{itemize}
+  \item Linear (and non-linear) regression
+  \item Logistic regression
+  \item SVM
+  \end{itemize}
+
+  Under the hood, it's almost always a \purple{cost function} and
+  \purple{gradient descent}.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Techniques (II): Neural networks}
+
+  \begin{itemize}
+  \item Feed forward
+  \item Backpropagation
+  \item Deep
+  \item Feature learning
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Techniques (III)}
+
+  \begin{itemize}
+  \item KMeans
+  \item PCA
+  \item Recommendation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Future}
+
+  \begin{itemize}
+  \item Learning
+  \item Algorithms about learning
+  \item Algorithms about features!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Resources}
+
+  \begin{itemize}
+  \item Nantes Machine Learning Meetup
+  \item Rennes Machine Learning Meetup \textit{\blue{(nouveau !)}}
+  \item Community
+  \item Conversation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Resources}
+  \cimggg{rmlm.png}
+
+  \vspace{5mm}
+  \centerline{\url{https://www.meetup.com/Meetup-Machine-Learning-Rennes/}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Resources}
+  \cimggg{nmlm.png}
+
+  \vspace{5mm}
+  \centerline{\url{http://www.meetup.com/Nantes-Machine-Learning-Meetup/}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Resources}
+  \cimggg{ml-week.png}
+
+  \vspace{5mm}
+  \centerline{\url{http://www.ml-week.com/maintenant.html}}
+  \vspace{2mm}
+  \centerline{\purple{Remise : DEVFEST}}
 \end{frame}
 
 \section{Q \& A}
 \label{sec:qa}
+
+\begin{frame}
+  % https://www.pexels.com/photo/food-healthy-people-woman-41219/
+  % https://static.pexels.com/photos/41219/apple-diet-face-food-41219.jpeg
+  % CC0 license
+  \cimgh{apple-pear.jpg}
+  \vspace{-.25\textheight}
+  \phrase{Questions?}
+  \vspace{.25\textheight}
+\end{frame}
+
 \end{document}
 %%% Local Variables:
 %%% mode: latex
